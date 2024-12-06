@@ -701,9 +701,6 @@ oldAndLoudfunction(user)
 
 
 // Cat Combinator
-
-
-
 // 1. Mama cat
 // Define an object called cat1that contains the following properties:
 
@@ -722,8 +719,6 @@ const cat1 = {
 console.log(cat1.age)
 console.log(cat1.breed)
 
-
-
 // 2. Papa cat
 // Define an object called cat2that also contains the properties:
 
@@ -737,22 +732,12 @@ const cat2 = {
     age: "77"
 };
 
-
-
 // 3. Combine Cats!
 // The cats are multiplying!
 
 // Write a function combineCatsthat has two parameters mama, and papa. The function will take two arguments -- each a cat object.
-
-function combineCats(mama, papa) {
-    console.log(cat1, cat2)
-}
-
-
-
-// Pass cat1and cat2as arguments to the combineCatsfunction. The function should console.log them.
+// Pass cat1and cat2 as arguments to the combineCats function. The function should console.log them.
 // Example:
-
 // combineCats(cat1, cat2)
 // { name: "Joe", age: 19, breed: "Mog" }
 
@@ -772,11 +757,16 @@ function combineCats(mama, papa) {
 // the age is 1
 // the breed is each of the parents' breeds with a hyphen in between
 // Example:
-
 // console.log(combineCats(cat1, cat2));
 // Result:
-
-
-
 // This is to demonstrate that a function can return an object
 
+function combineCats(mama, papa) {
+    return {
+        name: cat1.name + cat2.name,
+        breed: cat1.breed + "-" + cat2.breed
+        age: 1
+    }
+    
+}
+combineCats(cat1, cat2)
